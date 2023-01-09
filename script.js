@@ -5,6 +5,7 @@ const paragraph = document.getElementById('paragraph');
 //Disable/Enable Button
 const toggleButton = () => {
   button.disabled = !button.disabled;
+  paragraph.textContent = '';
 };
 
 // Passing Joke from to VoiceRSS API
