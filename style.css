@@ -12,10 +12,10 @@ body {
 }
 
 .main_title {
+  text-align: center;
   font-size: 6rem;
   font-family: 'Rampart One', cursive;
   text-align: center;
-  margin-left: 12rem;
   background: #ff3482;
   background: -webkit-linear-gradient(to bottom, #ff3482 40%, #6c1140);
   background: linear-gradient(to bottom, #ff3482 40%, #6c1140);
@@ -29,12 +29,21 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background: url('./img/robot.gif') left center no-repeat;
-  background-size: contain;
+  background-size: auto;
+}
+.column {
+  margin-left: 10rem;
 }
 
+.column_two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 button {
   cursor: pointer;
   outline: none;
@@ -46,8 +55,6 @@ button {
   background: -webkit-linear-gradient(to bottom, #ff3482 40%, #6c1140);
   background: linear-gradient(to bottom, #ff3482 40%, #6c1140);
   padding: 1rem 1.5rem;
-  margin-left: 6rem;
-  margin-bottom: 27rem;
   border: none;
   border-radius: 2rem;
   box-shadow: 20px 10px 40px 10px rgba(0, 0, 0, 0.4);
@@ -66,15 +73,34 @@ button:disabled {
   filter: brightness(30%);
 }
 
+p {
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-align: justify;
+  color: whitesmoke;
+  font-family: 'Courier New', Courier, monospace;
+  width: 42%;
+  margin-top: 2rem;
+}
+
 /* Media Query: Tablet or Smaller */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1320px) {
   .main_title {
     font-size: 4rem;
+    margin: 1rem 0;
   }
 
   .container {
-    background-size: cover;
+    background-size: auto;
     background-position: center center;
+  }
+  .column {
+    margin: 0rem;
+  }
+
+  p {
+    width: 85%;
+    margin-top: 24rem;
   }
   button {
     box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
@@ -84,5 +110,18 @@ button:disabled {
 @media screen and (max-width: 600px) {
   .main_title {
     font-size: 2.5rem;
+    margin: 2rem 0;
+  }
+  .column {
+    margin: 0rem;
+  }
+  p {
+    width: 100%;
+    margin-top: 25rem;
+    padding: 0 1.8rem;
+  }
+  button {
+    padding: 0.8rem 1rem;
+    font-size: 17px;
   }
 }

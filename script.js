@@ -1,5 +1,6 @@
 const button = document.getElementById('button');
 const audioElement = document.getElementById('audio');
+const paragraph = document.getElementById('paragraph');
 
 //Disable/Enable Button
 const toggleButton = () => {
@@ -23,12 +24,12 @@ const tellMe = async (joke) => {
 // Get Jokes from Joke API
 const getJokes = async () => {
   let joke = '';
-  const apiUrl = 'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
+  const apiUrl = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
     if (data.setup) {
-      joke = `${data.setup} ... ${data.delivery}`;
+      joke = `${data.setup} ${data.delivery}`;
     } else {
       joke = data.joke;
     }
@@ -36,6 +37,8 @@ const getJokes = async () => {
     tellMe(joke);
     //Disabled Button
     toggleButton();
+    //show Jokes as Text
+    paragraph.textContent = joke;
   } catch (error) {
     console.log(`Whoops sorry,there is an error`, error);
   }
