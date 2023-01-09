@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #45badd;
+}
+
+.main_title {
+  font-size: 6rem;
+  font-family: 'Rampart One', cursive;
+  text-align: center;
+  margin-left: 12rem;
+  background: #ff3482;
+  background: -webkit-linear-gradient(to bottom, #ff3482 40%, #6c1140);
+  background: linear-gradient(to bottom, #ff3482 40%, #6c1140);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('./img/robot.gif') left center no-repeat;
+  background-size: contain;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  font-size: 20px;
+  color: white;
+  background: #ff3482;
+  background: -webkit-linear-gradient(to bottom, #ff3482 40%, #6c1140);
+  background: linear-gradient(to bottom, #ff3482 40%, #6c1140);
+  padding: 1rem 1.5rem;
+  margin-left: 6rem;
+  margin-bottom: 27rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 20px 10px 40px 10px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+  filter: brightness(95%);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  cursor: default;
+  filter: brightness(30%);
+}
+
+/* Media Query: Tablet or Smaller */
+@media screen and (max-width: 1000px) {
+  .main_title {
+    font-size: 4rem;
+  }
+
+  .container {
+    background-size: cover;
+    background-position: center center;
+  }
+  button {
+    box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+  }
+}
+/* Media Query: Mobile */
+@media screen and (max-width: 600px) {
+  .main_title {
+    font-size: 2.5rem;
+  }
+}
