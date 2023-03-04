@@ -7,6 +7,6 @@ generate jokes into audio speach
 
 - Joke API generates jokes into string
 - click Tell Me A Joke! button to generate joke
-- Than Speech-to-text API converts string to audio
+- Then Speech-to-text API converts string to audio
 - also you can read jokes as text, if you can't hear it clearly
 - responsive app
